@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="methods" thread-count="4">
+    <test name="Arithmetic Operations Test">
+        <groups>
+            <run>
+                <include name="arithmetic"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.SimpleLangParserTest"/>
+        </classes>
+    </test>
+    <test name="Functionality Test">
+        <groups>
+            <run>
+                <include name="functionality"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.SimpleLangParserTest"/>
+        </classes>
+    </test>
+</suite>
